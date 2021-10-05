@@ -122,9 +122,6 @@ header {
     padding: 0.4rem 0;
 	background-color: var(--primary);
 }
-.brand{
-    /* width: 12%; */
-}
 strong{
     color: var(--secondary);
 }
