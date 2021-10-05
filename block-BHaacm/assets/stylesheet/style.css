@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html,
+ody, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl,dd, dt, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* custum */
+/* variables */
+html{
+	font-size: 16px;
+}
+body{
+	line-height: 1.5;
+	font-family: "open-sans" , sans-serif;
+}
+a{
+	text-decoration: none;
+}
+:root{
+    --primary:rgb(33,57,106);
+    --secondary:rgb(55,182,103);
+    --text-light: rgb(142,143,147);
+    --text-dark:rgb(22,25,38);
+}
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container{
+	max-width: 1100px;
+	width: 100%;
+	padding: 0 32px;
+	margin: 0 auto;
+}
+/* flex */
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+.item-center{
+	align-items: center;
+}
+.flex-48{
+	flex: 0 1 48%;
+}
+.flex-30{
+	flex: 0 1 30%;
+}
+.btn{
+    display: inline-block;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.9rem;
+    background-color: var(--secondary);
+    color: white;
+}
+.btn2{
+    display: inline-block;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.9rem;
+    background-color: var(--secondary);
+    color: white;
+}
+/* padding */
+.padding{
+	padding: 3.1rem 0;
+}
+/* header */
+header {
+    padding: 0.4rem 0;
+	background-color: var(--primary);
+}
+strong{
+    color: var(--secondary);
+}
+.nav a{
+	text-transform: uppercase;
+	color: white;
+	font-size: 1rem;
+}
+nav li{
+	margin-left: 1.9rem;
+}
+/* main */
+.article{
+    background-color: rgb(233,236,252);
+}
+img{
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+}
+.heading{
+    font-weight: 400;
+	font-size: 2.4rem;
+    color: var(--text-dark);
+}
+p{
+	margin: 0.5rem 0;
+	font-size: 1rem;
+    color: var(--text-light);
+}
+/* blog */
+h2{
+    font-weight: 400;
+	font-size: 3rem;
+	color: var(--text-dark);
+	margin-bottom: 1rem;
+	text-align: center;
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-dark);
+}
+/* footer */
+footer{
+    font-size: 1.5rem;
+    color: var(--text-light);
+    padding: 0.5rem 0;
+    background-color: var(--primary);
+}
+footer i{
+    margin-left: 0.4rem;
+}
+/* Mobile-approach */
+@media all and (max-width:768px) {
+    .padding{
+        padding: 0.7rem 0;
+    }
+    
+    .flex-48,.flex-30{
+        flex: 0 1 100%;
+        margin: 1.1rem;
+    }
+    .flex-wrap{
+        flex-wrap: wrap;
+    }
+    .nav{
+        display: flex;
+    }
+    .flex-column{
+        flex-direction: column;
+    }
+    .order{
+        order: 3;
+    }
+}
+
+
+
