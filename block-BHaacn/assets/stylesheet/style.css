@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* variables */
+:root{
+      --primary:rgb(249,35,77);
+      --bg:rgb(223,236,255);
+      --secondary:rgb(16,33,105);
+      --tertiary:rgb(35,52,123);
+      --text-dark:rgb(10,26,52);
+      --text-light:rgb(114,113,120);
+  }
+
+/* custom */
+body{
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    padding: 0 32px;
+    margin: 0 auto;
+    width: 100%;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+.width-full{
+    width: 100%;
+}
+.border-radius{
+    border-radius: 0.4rem;
+}
+/* flex */
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.display-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.item-center{
+    align-items: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-evenly{
+    justify-content: space-evenly;
+}
+.space-around{
+    justify-content: space-around;
+}
+.item-start{
+    justify-content: flex-start;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.flex-70{
+    flex: 0 1 70%;
+}
+.flex-65{
+    flex: 0 1 65%;
+}
+.flex-60{
+    flex: 0 1 60%;
+}
+.flex-55{
+    flex:  0 1 55%;
+}
+.flex-50{
+    flex: 0 1 50%;
+}
+.flex-45{
+    flex: 0 1 50%;
+}
+.flex-48{
+    flex: 0 1 48%;
+}
+.flex-35{
+    flex: 0 1 35%;
+}
+.flex-25{
+    flex: 0 1 25%;
+}
+.flex-30{
+    flex: 0 1 30%;
+}
+.flex-20{
+    flex: 0 1 20%;
+}
+.flex-15{
+    flex: 0 1 15%;
+}
+.flex-10{
+    flex: 0 1 10%;
+}
+/* padding */
+.padding{
+    padding: 1.5rem 0;
+}
+/* margin */
+.margin-left{
+    margin-left: 1rem;
+}
+.margin-right{
+    margin-right: 1rem;
+}
+/* btn */
+.btn{
+    padding: 0.4rem 1.5rem;
+    color: white;
+    /* background-color: rgb(249,35,77); */
+    /* cursor: pointer; */
+    /* transition: all 200ms case ease-in-out; */
+    display: inline-block;
+    border-radius: 0.2rem;
+    text-align: center;
+    background-color: var(--primary);
+}
+/* text */
+.text-transform{
+    text-transform: uppercase;
+}
+.text-decoration{
+    text-decoration: none;
+}
+.underline{
+    text-decoration: underline;
+}
+/* align */
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.font-size-a{
+    text-align: left;
+    font-size: 1.2rem;
+}
+/* header */
+header{
+    padding: 0.9rem 0;
+    width: 100%;
+    background-color: transparent;
+}
+.btn-header{
+    margin-left: 1.8rem;
+}
+.brand{
+    font-weight: 600;
+    color: #ffff;
+    font-size: 2rem;
+}
+.nav a{
+    color: #ffff;
+    
+}
+/* hero */
+.hero{
+    background: linear-gradient(rgba(53,35,166,0.9),rgba(53,35,166,0.6)), url(../media/banner.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* height: 100vh; */
+}
+.hero-image{
+    -o-object-fit: cover;
+    object-fit: cover;
+    font-size: 0;
+    height: 100%;
+}
+.article{
+    padding-bottom: 1.4rem 0;
+}
+.article h1{
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: #ffff;
+    margin-bottom: 1.9rem;
+}
+.article strong{
+    color: var(--primary);
+}
+.article p{
+    color: #ffff;
+    margin-bottom: 1rem;
+}
+/* about-section */
+.about h2{
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+.btn-about{
+    padding: 0.7rem 1.2rem;
+}
+.about p{
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+/* why-you join-section */
+.join-section{
+    background-color: var(--bg);
+}
+.join h2{
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+.join{
+    position: relative;
+}
+.join-inside h3{
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: bolder;
+}
+.join-inside p{
+    color: var(--text-light);
+}
+.join-inside{
+    position: relative;
+    padding: 1rem;
+    text-align: left;
+    display: inline-block;
+    border: 0.1rem dashed var(--primary);
+}
+.one small{
+    /* z-index: 99; */
+    top: -1.2rem;
+    position: absolute;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display:inline-block;
+    height: 1.7rem;
+    width: 1.3rem;
+    background-color: var(--bg);
+    text-align: center;
+}
+/* schedule */
+.schedule time{
+    line-height: 1;
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    padding: 1.5rem 0;
+    font-size: 1.9rem;
+    font-weight: bold;
+    border: 0.2rem dashed (black);
+}
+hr{
+ border: dashed 0.1rem var(--primary);
+  position: absolute;
+  width: 0;
+  height: 4.5rem;
+  left: 10rem;
+}
+
+.schedule h2{
+    font-size: 2.7rem;
+    color: var(--text-dark);
+    margin-bottom: 1.4rem;
+    font-weight: 600;
+}
+h4{
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    font-weight: bold;
+
+}
+.Digital p {
+    color: var(--text-light);
+   
+}
+.dashed-circle time{
+    line-height: 1;
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    border: 0.2rem dashed var(--primary);
+    color: var(--primary);
+    border-radius: 50%;
+     background-color: white;
+    padding: 1.5rem 0;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+button{
+    border: none;
+    text-align: center;
+}
+/* participents */
+.participant{
+    padding: 5rem 0;
+    background-color: var(--bg);
+}
+.participant h3{
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bolder;
+    
+}
+.participant p{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    /* color: white;  */
+}
+.participant img{
+    width: 40%;
+}
+.speaker{
+    border-radius: 0.3rem;
+    padding: 1rem 0;
+}
+.active{
+    background-color: var(--primary);
+}
+.speaker:hover{
+    background-color: var(--primary);
+}
+/* banner-button */
+.banner-button{
+    position: relative;
+} 
+.play-btn i{
+    /* height: 6rem; */
+    /* width: 6rem; */
+    /* border-radius: 50%; */
+    /* background-color: white; */
+    color: var(--primary);
+    top: 10rem;
+    /* right: 0; */
+    left: 20rem;
+    bottom: 0;
+    position: absolute;
+    font-size: 3rem;
+}
+.play-btn{
+     height: 6rem; 
+    width: 6rem;
+     border-radius: 50%;
+     background-color: white;
+    
+}
+/* news-section */
+.news{
+    background-color: var(--bg);
+    padding-bottom: 7rem;
+}
+.news h3{
+    padding: 1.3rem 0;
+    text-align: center;
+    font-weight: bolder;
+     font-size: 2.1rem;
+     color: var(--text-dark);
+}
+.news-content h4{
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+.news-content p{
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+.news-content a{
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+.news-active a{
+    color: var(--primary);
+}
+.news-content a:hover{
+    color: var(--primary);   
+}
+/* footer */
+footer header{
+    padding: 6rem;
+    background-color: var(--tertiary);
+}
+footer header h3{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+footer header a{
+    color: var(--text-light);
+}
+footer header i{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+.footer{
+    color: var(--text-light);
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--secondary);
+}
+@media screen and (max-width:768px){
+    .flex-10,.flex-15,.flex-25,.flex-45,.flex-48,.flex-50,.flex-55,.flex-60,.flex-65,.flex-70{
+        flex: 100%;
+    }
+    .sm-justify-center{
+        justify-content: center;
+    }
+    .sm-center{
+        text-align: center;
+    }
+    .sm-flex-direction{
+        flex-direction: column;
+    }
+}
+    
